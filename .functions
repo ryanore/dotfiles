@@ -26,28 +26,30 @@ function pgStart() {
 # Make an alias to the pwd.
 function mkalias() {
   loc=$(pwd)
-  if grep -Fxq "alias $1" ~/.aliases
+  file=~/.aliases
+  if grep -Fxq "alias $1" $file
   then
     echo "alias $1 already exists, please edit it or think of a new name. :P"
   else
     echo "alias $1 was not found, creating that now."
-    echo "alias $1='cd $loc'" >> ~/.aliases
-    source ~/.aliases
+    echo "alias $1='cd $loc'" >> $file
+    source $file
   fi
 }
 
 # Make an alias to the pwd.
 function rmalias() {
   str="alias $1="
-
-  if grep -Fxq "$str" ~/.aliases
+  file=~/.aliases
+  if grep "$str" ~/.aliases
   then
-    echo "remove $1"
+    sed -i '' "/$str/d" $file
+    unalias $1
+    source $file
+    echo "removed $1 from  $file"
   else
     echo "alias $1 does not exist"
   fi
-
-  source ~/.aliases
 }
 
 touch ~/.aliases
