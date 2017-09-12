@@ -1,5 +1,6 @@
 source ~/.functions
 source ~/.aliases
+source ~/.inputrc
 
 # Docker for Mac only
 export DOCKER_IP=localhost
