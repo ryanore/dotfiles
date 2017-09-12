@@ -15,4 +15,4 @@ Best if used on a new machine, or if you don't have anything you care about in t
 
 **Most importantly**
 - .bash_profile
-- .gitignore  
+- .gitconfig (has my name in it)  
