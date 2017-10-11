@@ -1,4 +1,5 @@
 # bind up and down arrows to autocomplete your history.
+# NOT WORKING CORRECTLY.
 
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
+# bind '"\e[A": history-search-backward'
+# bind '"\e[B": history-search-forward'

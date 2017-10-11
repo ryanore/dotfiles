@@ -1,14 +1,6 @@
 [user]
 	name = Ryan Ore
 	email = ryan@ryanore.com
-	
-[github]
-	user = ryanore
-
-[core]
-	editor = atom
-	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = ~/.gitignore
 
 [credential]
  helper = cache --timeout=3600
@@ -41,6 +33,7 @@ ci = commit
 co = checkout
 br = branch
 last = log -1 HEAD
+pod = pull origin develop
 
 # shows list of files that have a merge conflict
 conflicts = diff --name-only --diff-filter=U

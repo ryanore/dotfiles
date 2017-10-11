@@ -17,7 +17,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/usr/local/mysql/bin"
 
 # Bash Prompt customized
-export PS1="\w\[\033[33m\]\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
-
-# added by Anaconda2 4.4.0 installer
-export PATH=":$PATH:/Users/ryanore/anaconda/bin"
+export PS1="\w\[\033[33m\]\[\033[33m\] (\$(get_git_branch))\[\033[00m\] $ "
+ 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
